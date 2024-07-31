@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewModels="clr-namespace:Distancia2429841.ViewsModels"
+             x:Class="Distancia2429841.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel />
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Punto 1" FontSize="18" Padding="5"/>
+            <Entry Text="{Binding Puntox1}" Placeholder=" Ingrese el Punto X1" Keyboard="Numeric" Margin="10"/>
+            <Entry Text="{Binding Puntoy1}" Placeholder="Ingrese el Punto  Y1" Keyboard="Numeric" Margin="10"/>
+
+            <Label Text="Punto 2" FontSize="18" Padding="5"/>
+            <Entry Text="{Binding Puntox2}" Placeholder="Ingrese el punto X2 " Keyboard="Numeric" Margin="10"/>
+            <Entry Text="{Binding Puntoy2}" Placeholder="Ingrese el punto Y2 " Keyboard="Numeric" Margin="10"/>
+
+            <Button Text="Calcular " Command="{Binding CalDistanciaCommand}" />
+            <Entry Text="{Binding Distancia}" FontSize="20" Margin="10"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
